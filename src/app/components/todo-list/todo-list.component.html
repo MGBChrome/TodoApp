@@ -1,4 +1,6 @@
 <h3 class="title">Erfasste TODOs:</h3>
 <ul id="todo-list">
-  <li *ngFor="let todoItem of todos; let i=index">{{todoItem.todoName}}: {{todoItem.todo}}</li>
+  <li *ngFor="let todoItem of todos; let i=index">
+    {{todoItem.todoName}}: {{todoItem.todo}} <button (click)="deleteItem(todoItem.id)">x</button>
+  </li>
 </ul>

@@ -1,0 +1,12 @@
+<p>Dies ist eine TODO-Liste. Trage Name und T&auml;tigkeit ein:</p>
+<div class="elevated-form">
+  <div>
+    <label for="name-input">Name:</label>
+    <input id="name-input" type="text" [(ngModel)]="nameInput" required /> <br>
+
+    <label for="todo-input">Todo:</label>
+    <input id="todo-input" type="text" [(ngModel)]="todoInput" required />
+  </div>
+  <br>
+  <button (click)="saveFormInput()">Submit</button>
+</div>
