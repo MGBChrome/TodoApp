@@ -1,5 +1,5 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {TodoItem} from "../root/app.component";
+import {TodoItem} from "../../model/todoItem";
 
 @Component({
   selector: 'app-todo-input',

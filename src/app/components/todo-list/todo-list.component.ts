@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {TodoItem} from "../root/app.component";
+import {TodoItem} from "../../model/todoItem";
 
 @Component({
   selector: 'app-todo-list',
@@ -8,7 +8,7 @@ import {TodoItem} from "../root/app.component";
 })
 export class TodoListComponent implements OnInit {
   @Input() todos: Array<TodoItem> = [];
-  @Output() itemsDeleted = new EventEmitter<Array<TodoItem>>()
+  @Output() itemDeleted = new EventEmitter<number>()
 
   constructor() { }
 
@@ -16,10 +16,6 @@ export class TodoListComponent implements OnInit {
   }
 
   deleteItem(id: number) {
-    this.todos = this.todos.filter((t) => {
-      return t.id !== id
-    });
-
-    this.itemsDeleted.emit(this.todos);
+    this.itemDeleted.emit(id);
   }
 }

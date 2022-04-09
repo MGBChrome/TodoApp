@@ -5,12 +5,14 @@ import { AppComponent } from './components/root/app.component';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { TodoInputComponent } from './components/todo-input/todo-input.component';
 import {FormsModule} from "@angular/forms";
+import { TodoComponent } from './components/todo/todo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoListComponent,
-    TodoInputComponent
+    TodoInputComponent,
+    TodoComponent
   ],
   imports: [
     BrowserModule,

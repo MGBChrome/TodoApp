@@ -1,0 +1,3 @@
+<h1 class="title">{{title}}</h1>
+<app-todo-input (addNewItem)="setNewItem($event)"></app-todo-input>
+<app-todo-list [todos]="todoService.todos" (itemDeleted)="itemDeleted($event)"></app-todo-list>
